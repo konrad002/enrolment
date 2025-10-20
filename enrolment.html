@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,8 +18,8 @@
     <header class="header-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 header-content">
             <div style="display: flex; align-items: center;">
-                <img src="https://placehold.co/50x50/1e3a8a/ffffff?text=U" style="width: 30px; height: 30px; margin-right: 1rem;">
-                <h2 class="header-title">University Enrollment Portal</h2>
+                <img src="https://placehold.co/50x50/1e3a8a/ffffff?text=U" alt="U" style="width: 30px; height: 30px; margin-right: 1rem;">
+                <h1 class="header-title">University Enrollment Portal</h1>
             </div>
             
             <button class="icon-btn-danger" onclick="console.log('Close button clicked');" title="Close">
@@ -32,7 +33,7 @@
     <div class="nav-bar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 nav-container">
             <a href="#home" class="nav-link" role="link">Home</a>
-            <a href="#apply" accesskey="a" class="nav-link">Application</a>
+            <a href="#apply" class="nav-link">Application</a>
             <a class="nav-link">FAQ</a>
         </div>
     </div>
@@ -42,7 +43,7 @@
         <table class="layout-table">
             <tbody>
                 <tr>
-                    <td class="align-top p-4 w-full md:w-1/2">
+                    <th class="align-top p-4 w-full md:w-1/2">
                         <form onsubmit="return false;" class="space-y-4">
                             
                             <section id="application-form" class="card">
@@ -51,21 +52,25 @@
                                 <div class="flex-col">
                                     <label for="full-name" class="input-label">Full Legal Name</label>
                                     <input type="text" id="full-name" title="Required field" class="input-field" placeholder="Enter name">
-                                    <p class="mt-1 text-sm text-gray-500" tabindex="1">Required for verification.</p> 
+                                    <p class="mt-1 text-sm text-gray-500">Required for verification.</p> 
                                 </div>
 
                                 <div class="flex-col">
+                                    <label id="searchLabel" for="email-address">Email</label>
                                     <input type="email" id="email-address" class="input-field" placeholder="Email Address (required)">
+                                    
                                 </div>
                                 
                                 <div class="checkbox-group pt-4 items-start">
+                                    <label  for="privacy-check"></label>
                                     <input type="checkbox" name="privacy-check" class="checkbox-input" style="margin-top: 0.25rem;"> 
+                                    
                                     <span>I agree to the 
                                         <a href="/privacy" style="color: var(--primary-blue); font-weight: 700;" class="underline">Click Here to Read More</a> 
                                     on the privacy policy.</span>
                                 </div>
                                 
-                                <img src="https://placehold.co/200x5/dddddd/dddddd" style="display: block; margin: 10px auto; width: 80%;" title="Divider line">
+                                <img src="https://placehold.co/200x5/dddddd/dddddd" style="display: block; margin: 10px auto; width: 80%;" alt="Divider Line" title="Divider line">
 
                             </section>
 
@@ -118,7 +123,7 @@
                                 
                                 <h4 style="font-size: 1.25rem; font-weight: 500; margin-bottom: 0.75rem; margin-top: 1.5rem;">Academic History</h4>
 
-                                <h6 style="font-size: 1.125rem; font-weight: 500; margin-bottom: 0.5rem; margin-top: 1rem;">Required documents</h6>
+                                <h3 style="font-size: 1.125rem; font-weight: 500; margin-bottom: 0.5rem; margin-top: 1rem;">Required documents</h3>
 
                                 <div class="flex-col mt-4">
                                     <label for="gpa" class="input-label">Current GPA</label>
@@ -144,7 +149,7 @@
                             </div>
                             <div id="form-status" class="form-status hidden"></div>
                         </form>
-                    </td>
+                    </th>
 
                     <td class="align-top p-4 max-w-sm">
                         
@@ -152,7 +157,7 @@
                             <h3 class="card-title">Application Guide</h3>
                             
                             <iframe class="video-guide-iframe" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                            <p class="text-sm mt-3 justified-text text-gray-600">Watch our step-by-step guide to filling out your application. This is a crucial resource for all first-time applicants and contains all necessary information about prerequisites and timelines. Ensure you watch the entire video before submitting any forms.</p>
+                            <p class="text-sm mt-3  text-gray-600">Watch our step-by-step guide to filling out your application. This is a crucial resource for all first-time applicants and contains all necessary information about prerequisites and timelines. Ensure you watch the entire video before submitting any forms.</p>
                         </section>
 
                         <section id="important-dates" class="card">
@@ -195,7 +200,7 @@
                             <h3 class="card-title">Campus Life</h3>
                             <div class="flex-col items-center">
                                 <a href="#library-info" style="color: var(--primary-blue); font-weight: 700;" class="underline">
-                                    <img src="https://placehold.co/300x200/ef4444/ffffff?text=Library" alt="photo" style="border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); margin-bottom: 0.25rem;">
+                                    <img src="https://placehold.co/300x200/ef4444/ffffff?text=Library" alt="Library" style="border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); margin-bottom: 0.25rem;">
                                     Library Image
                                 </a>
                                 
