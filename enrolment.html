@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="main.css">
+     <script type="text/javascript" src="main.js"></script>
+    <title>University Enrollment</title>
+    
+    
+    
+    
+</head>
+<body>
+    <a href="#main-content" class="visually-hidden" tabindex="0">Skip to main content</a>
+    
+    <header class="header-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 header-content">
+            <div style="display: flex; align-items: center;">
+                <img src="https://placehold.co/50x50/1e3a8a/ffffff?text=U" style="width: 30px; height: 30px; margin-right: 1rem;">
+                <h2 class="header-title">University Enrollment Portal</h2>
+            </div>
+            
+            <button class="icon-btn-danger" onclick="console.log('Close button clicked');" title="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" style="height: 1.5rem; width: 1.5rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="nav-bar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 nav-container">
+            <a href="#home" class="nav-link" role="link">Home</a>
+            <a href="#apply" accesskey="a" class="nav-link">Application</a>
+            <a class="nav-link">FAQ</a>
+        </div>
+    </div>
+
+    <main id="main-content" class="max-w-7xl mx-auto main-container">
+
+        <table class="layout-table">
+            <tbody>
+                <tr>
+                    <td class="align-top p-4 w-full md:w-1/2">
+                        <form onsubmit="return false;" class="space-y-4">
+                            
+                            <section id="application-form" class="card">
+                                <h3 class="card-title">Step 1: Personal Details</h3>
+
+                                <div class="flex-col">
+                                    <label for="full-name" class="input-label">Full Legal Name</label>
+                                    <input type="text" id="full-name" title="Required field" class="input-field" placeholder="Enter name">
+                                    <p class="mt-1 text-sm text-gray-500" tabindex="1">Required for verification.</p> 
+                                </div>
+
+                                <div class="flex-col">
+                                    <input type="email" id="email-address" class="input-field" placeholder="Email Address (required)">
+                                </div>
+                                
+                                <div class="checkbox-group pt-4 items-start">
+                                    <input type="checkbox" name="privacy-check" class="checkbox-input" style="margin-top: 0.25rem;"> 
+                                    <span>I agree to the 
+                                        <a href="/privacy" style="color: var(--primary-blue); font-weight: 700;" class="underline">Click Here to Read More</a> 
+                                    on the privacy policy.</span>
+                                </div>
+                                
+                                <img src="https://placehold.co/200x5/dddddd/dddddd" style="display: block; margin: 10px auto; width: 80%;" title="Divider line">
+
+                            </section>
+
+                            <section id="course-selection" class="card mt-6">
+                                <h3 class="card-title">Step 2: Course Selection</h3>
+                                
+                                <label class="input-label block">Select your top 3 programs:</label>
+
+                                <div id="program-list" style="border: 1px solid var(--gray-300); padding: 0.75rem; border-radius: 0.5rem;" class="space-y-2">
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="comp-sci" class="checkbox-input">
+                                        <label for="comp-sci">Computer Science</label>
+                                    </div>
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" class="checkbox-input">
+                                        <span>Mechanical Engineering</span>
+                                    </div>
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="history" class="checkbox-input">
+                                        <label for="history">Ancient History</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-col mt-4">
+                                    <select id="entry-year" class="input-field">
+                                        <option value="">-- Select Entry Year --</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                    </select>
+                                </div>
+                            </section>
+
+                            <section id="scholarship-checklist" class="card mt-6">
+                                <h3 class="card-title">Step 3: Scholarship Eligibility</h3>
+
+                                <h4 style="font-size: 1.25rem; font-weight: 500; margin-bottom: 0.75rem;">Financial Criteria</h4>
+                                
+                                <div class="space-y-4">
+                                    <div class="checkbox-group items-start">
+                                        <input type="checkbox" id="financial-aid" class="checkbox-input" style="margin-top: 0.25rem;">
+                                        <label for="financial-aid" style="flex: 1;">I have completed the FAFSA or equivalent application.</label>
+                                    </div>
+
+                                    <div class="checkbox-group items-start">
+                                        <input type="radio" name="income" id="income-low" value="low" class="radio-input" style="margin-top: 0.25rem;">
+                                        <span>Household income is below the regional median.</span>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <h4 style="font-size: 1.25rem; font-weight: 500; margin-bottom: 0.75rem; margin-top: 1.5rem;">Academic History</h4>
+
+                                <h6 style="font-size: 1.125rem; font-weight: 500; margin-bottom: 0.5rem; margin-top: 1rem;">Required documents</h6>
+
+                                <div class="flex-col mt-4">
+                                    <label for="gpa" class="input-label">Current GPA</label>
+                                    <input type="text" id="gpa" class="gpa-input input-field" placeholder="Enter GPA (e.g., 3.8)">
+                                    <p style="color: var(--red-600); font-weight: 700; margin-top: 0.5rem;" aria-live="polite">STATUS: Needs Immediate Review</p>
+                                </div>
+                            </section>
+
+                            <div class="submit-btn-wrapper">
+                                <span class="submit-btn" role="button" tabindex="0"
+                                      onclick="submitForm()">
+                                      Submit Application
+                                </span>
+                                
+                                <button class="icon-btn" title="Edit Application">
+                                    <span style="color: #9ca3af;">&#x270E;</span> 
+                                </button>
+                                
+                                <button class="icon-btn-danger" 
+                                        onclick="document.getElementById('form-status').textContent=''; document.getElementById('form-status').classList.add('hidden');" title="Clear Status">
+                                    &#x2715; 
+                                </button>
+                            </div>
+                            <div id="form-status" class="form-status hidden"></div>
+                        </form>
+                    </td>
+
+                    <td class="align-top p-4 max-w-sm">
+                        
+                        <section id="video-guide" class="card mb-6">
+                            <h3 class="card-title">Application Guide</h3>
+                            
+                            <iframe class="video-guide-iframe" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                            <p class="text-sm mt-3 justified-text text-gray-600">Watch our step-by-step guide to filling out your application. This is a crucial resource for all first-time applicants and contains all necessary information about prerequisites and timelines. Ensure you watch the entire video before submitting any forms.</p>
+                        </section>
+
+                        <section id="important-dates" class="card">
+                            <h3 class="card-title">Key Dates</h3>
+                            
+                            <p class="mb-4 flex items-center space-x-2">
+                                <span style="font-size: 1.25rem;" aria-hidden="true">&#128337;</span> 
+                                The priority deadline is in <b>four weeks</b>. Don't miss out!
+                            </p>
+                            
+                            <img src="https://placehold.co/300x150/fde047/a78bfa?text=Deadline+12/15" alt="" style="border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                        </section>
+
+                        <section id="admission-stats" class="card mt-6">
+                            <h3 class="card-title">Admission Statistics (2023)</h3>
+                            <table class="stat-table">
+                                <thead>
+                                    <tr style="background-color: var(--gray-100);">
+                                        <th class="border p-2 font-medium">Program</th>
+                                        <th class="border p-2 font-medium">Applicants</th>
+                                        <th class="border p-2 font-medium">Admitted</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="border p-2">Science</td>
+                                        <td class="border p-2">5,200</td>
+                                        <td class="border p-2">520</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border p-2">Arts</td>
+                                        <td class="border p-2">3,800</td>
+                                        <td class="border p-2">760</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                        
+                        <section id="campus-tour" class="card mt-6">
+                            <h3 class="card-title">Campus Life</h3>
+                            <div class="flex-col items-center">
+                                <a href="#library-info" style="color: var(--primary-blue); font-weight: 700;" class="underline">
+                                    <img src="https://placehold.co/300x200/ef4444/ffffff?text=Library" alt="photo" style="border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); margin-bottom: 0.25rem;">
+                                    Library Image
+                                </a>
+                                
+                                <p class="text-sm text-gray-600 mt-2">The main campus library.</p>
+
+                                <span style="font-size: 0.875rem; font-weight: 700; color: var(--primary-blue); cursor: pointer; margin-top: 0.5rem;" onclick="console.log('Next image clicked');">
+                                    Next Image &gt; 
+                                </span>
+                            </div>
+                        </section>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="warning-box">
+            <h3 class="warning-box-title">Quick Links & Resources</h3>
+            <div class="link-list">
+                <a href="#link1">Financial Aid Calculators</a>
+                <a href="#link2">Admissions FAQ</a>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <span onclick="console.log('Resource clicked');" style="font-size: 0.75rem; color: #4b5563; cursor: pointer; padding: 2px;">(i)</span>
+                    <span onclick="console.log('Resource clicked');" class="text-primary-blue hover:underline cursor-pointer">Student Housing Directory</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="max-w-7xl mx-auto text-center">
+            <p>&copy; 2025 University. All rights reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
